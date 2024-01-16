@@ -28,7 +28,7 @@ def calculate(list):
   matrix = array.reshape(matrix_intended_dimensions)
 
 
-  calculations_to_perform_for_rows_columns_and_and_flattened_matrix = {
+  calculations_to_perform_for_rows_columns_and_flattened_matrix = {
     'mean' : np.ndarray.mean,
     'variance' : np.ndarray.var,
     'standard deviation' : np.ndarray.std,
@@ -39,7 +39,7 @@ def calculate(list):
 
   calculations = {}
   
-  for calculation_type, calculation_function in calculations_to_perform_for_rows_columns_and_and_flattened_matrix.items():
+  for calculation_type, calculation_function in calculations_to_perform_for_rows_columns_and_flattened_matrix.items():
     values_for_columns, values_for_rows, value_for_flattened_matrix = perform_calculation_for_matrix(calculation_function, matrix)
     calculations[calculation_type] = [values_for_columns, values_for_rows, value_for_flattened_matrix]
   
